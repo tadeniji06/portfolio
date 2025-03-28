@@ -11,6 +11,9 @@
   font-optical-sizing: auto;
 }
 
+textarea {
+  resize: none;
+}
 @layer base {
   body {
     @apply bg-space-black text-white overflow-x-hidden;
@@ -20,23 +23,24 @@
 @layer components {
   .neon-text {
     @apply text-neon-blue;
-    text-shadow: 0 0 5px theme('colors.glow.blue'), 0 0 10px theme('colors.glow.blue');
+    text-shadow: 0 0 5px theme("colors.glow.blue"),
+      0 0 10px theme("colors.glow.blue");
   }
-  
+
   .neon-border {
     @apply border border-neon-blue shadow-neon-blue;
   }
-  
+
   .cyber-button {
     @apply px-6 py-2 bg-space-navy border border-neon-blue text-neon-blue 
            shadow-neon-blue transition-all duration-300 
            hover:bg-neon-blue hover:text-space-black hover:shadow-neon-blue;
   }
-  
+
   .glass-panel {
     @apply bg-space-navy/30 backdrop-blur-md border border-white/10 rounded-lg;
   }
-  
+
   .grid-background {
     @apply bg-cyber-grid bg-grid-lg;
   }
@@ -49,10 +53,12 @@
 }
 
 @keyframes glitch {
-  2%, 64% {
+  2%,
+  64% {
     transform: translate(2px, 0) skew(0deg);
   }
-  4%, 60% {
+  4%,
+  60% {
     transform: translate(-2px, 0) skew(0deg);
   }
   62% {
