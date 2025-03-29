@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://olutunmise.netlify.app/sitemap.xml

@@ -11,6 +11,7 @@ import Projects from "../components/Projects";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
+import SEO from "../services/SEO";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -71,6 +72,11 @@ const Home = () => {
 
   return (
     <div className='relative'>
+      <SEO
+        title='Olutunmise Adeniji - Web & Frontend Developer in Nigeria'
+        description='Professional web developer specializing in React, JavaScript, and modern frontend technologies. Based in Nigeria and available for projects worldwide.'
+        keywords='Olutunmise Adeniji, web developer Nigeria, frontend developer Lagos, React expert, JavaScript developer Nigeria'
+      />
       <Navbar />
       <HeroSection />
       <About />

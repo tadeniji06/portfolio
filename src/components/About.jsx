@@ -58,13 +58,11 @@ const About = () => {
           <div ref={textRef} className="md:w-1/2 glass-panel p-8">
             <h3 className="text-2xl font-bold mb-4 text-neon-purple">Tunmise</h3>
             <p className="mb-4 text-white/80">
-              I'm a self-taught software junkie with a passion for front-end development. Based in Nigeria, 
+              I'm a self-taught software junkie with a passion for front-end & web development. Based in Nigeria, 
               I've been crafting digital experiences that blend creativity with technical precision.
             </p>
             <p className="mb-6 text-white/80">
               My journey in tech has been driven by curiosity and a relentless pursuit of knowledge. 
-              I specialize in creating responsive, intuitive, and visually stunning web applications 
-              that push the boundaries of what's possible on the web.
             </p>
             
             <div className="flex space-x-4">
