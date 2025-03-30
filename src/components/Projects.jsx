@@ -134,6 +134,14 @@ const Projects = () => {
       link: "https://tradesimm.netlify.app/",
     },
     {
+      title: "Real Estate Website",
+      description:
+        "An web application that allows users to browse and search for properties for sale or rent.",
+      technologies: ["React", "GSAP", "Tailwind CSS"],
+      image: null,
+      link: "https://mantoria.netlify.app/",
+    },
+    {
       title: "Trading Simulator API",
       description:
         "A RESTful API for the Trading Simulator, providing data and functionality for the trading simulator.",
@@ -141,14 +149,6 @@ const Projects = () => {
       image: null,
       link: "https://github.com/tadeniji06/Trading-Network-API",
     },
-
-    // {
-    //   title: 'Personal Finance Tracker',
-    //   description: 'An application to track personal expenses, create budgets, and visualize spending patterns.',
-    //   technologies: ['React', 'Firebase', 'Chart.js', 'Tailwind CSS'],
-    //   image: null, // Replace with actual image path
-    //   link: '#'
-    // }
   ];
 
   return (
