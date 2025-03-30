@@ -72,7 +72,7 @@ const Experience = () => {
   const experiences = [
     {
       company: 'M360 Solutions',
-      position: 'Front-End Developer',
+      position: 'Lead Front-End Developer',
       period: 'February 2025 - Present',
       description: 'Leading front-end development initiatives, creating responsive and interactive user interfaces using React and modern JavaScript frameworks. Collaborating with design and back-end teams to deliver seamless user experiences.'
     },
