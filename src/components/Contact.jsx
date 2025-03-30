@@ -106,7 +106,7 @@ const Contact = () => {
 
         <div className='flex flex-col md:flex-row gap-10'>
           {/* Contact Form */}
-          <div ref={formRef} className='md:w-1/2'>
+          {/* <div ref={formRef} className='md:w-1/2'>
             <div className='glass-panel p-8'>
               <h3 className='text-2xl font-bold mb-6 text-neon-purple'>
                 Send a Message
@@ -198,7 +198,7 @@ const Contact = () => {
                 )}
               </form>
             </div>
-          </div>
+          </div> */}
 
           {/* Contact Info */}
           <div ref={infoRef} className='md:w-1/2'>
