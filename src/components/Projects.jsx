@@ -136,7 +136,7 @@ const Projects = () => {
     {
       title: "Real Estate Website",
       description:
-        "An web application that allows users to browse and search for properties for sale or rent.",
+        "A web application that allows users to browse and search for properties for sale or rent.",
       technologies: ["React", "GSAP", "Tailwind CSS"],
       image: null,
       link: "https://mantoria.netlify.app/",
