@@ -129,7 +129,7 @@ const Projects = () => {
       title: "Studio Freight",
       description:
         "Studio Freight is a web application that allows users to book and manage freight shipments. It provides a user-friendly interface for creating and tracking shipments, as well as managing customer information and invoices.",
-      technologies: ["React", "Tailwind CSS", "GSAP"],
+      technologies: ["React", "Tailwind CSS", "GSAP", "Three.js"],
       image: null,
       link: "https://repeat.studiofreight.com/",
     },
