@@ -126,6 +126,14 @@ const Projects = () => {
       link: "https://github.com/tadeniji06/Trading-Network-API",
     },
     {
+      title: "E-commerce Store Dashboard",
+      description:
+        "A dashboard for an e-commerce store, providing insights and analytics for the store's performance.",
+      technologies: ["React", "Tailwind CSS", "Kanban", "Chart.js"],
+      image: null,
+      link: "https://react-dashb.netlify.app/",
+    },
+    {
       title: "Studio Freight",
       description:
         "Studio Freight is a web application that allows users to book and manage freight shipments. It provides a user-friendly interface for creating and tracking shipments, as well as managing customer information and invoices.",
