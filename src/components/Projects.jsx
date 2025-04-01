@@ -142,6 +142,14 @@ const Projects = () => {
       link: "https://plugevents.netlify.app/",
     },
     {
+      title: "GPC Group",
+      description:
+        "A logistics company website that provides information about the company's services and bookings, team, and contact information.",
+      technologies: ["React", "Tailwind CSS", "GSAP", "PayStack API"],
+      image: null,
+      link: "https://gpcgroupltd.com/",
+    },
+    {
       title: "Trading Simulator",
       description:
         "A web-based trading simulator that allows users to practice trading strategies and analyze market data.",
