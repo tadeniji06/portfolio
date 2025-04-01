@@ -118,6 +118,22 @@ const Projects = () => {
 
   const projects = [
     {
+      title: "Trading Simulator API",
+      description:
+        "A RESTful API for the Trading Simulator, providing data and functionality for the trading simulator.",
+      technologies: ["Node.js", "Mongo DB", "Express.js", "CoinGecko API"],
+      image: null,
+      link: "https://github.com/tadeniji06/Trading-Network-API",
+    },
+    {
+      title: "Studio Freight",
+      description:
+        "Studio Freight is a web application that allows users to book and manage freight shipments. It provides a user-friendly interface for creating and tracking shipments, as well as managing customer information and invoices.",
+      technologies: ["React", "Tailwind CSS", "GSAP"],
+      image: null,
+      link: "https://repeat.studiofreight.com/",
+    },
+    {
       title: "Event Ticketing Website",
       description:
         "An event ticketing website that allows users to browse and purchase tickets for various events.",
@@ -140,14 +156,6 @@ const Projects = () => {
       technologies: ["React", "GSAP", "Tailwind CSS"],
       image: null,
       link: "https://mantoria.netlify.app/",
-    },
-    {
-      title: "Trading Simulator API",
-      description:
-        "A RESTful API for the Trading Simulator, providing data and functionality for the trading simulator.",
-      technologies: ["Node.js", "Mongo DB", "Express.js"],
-      image: null,
-      link: "https://github.com/tadeniji06/Trading-Network-API",
     },
   ];
 
