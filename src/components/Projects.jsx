@@ -150,12 +150,12 @@ const Projects = () => {
       link: "https://plugevents.netlify.app/",
     },
     {
-      title: "GPC Group",
+      title: "Franemm Industries",
       description:
-        "A logistics company website that provides information about the company's services and bookings, team, and contact information.",
+        "An industrial cosmetic and laundry producing company website",
       technologies: ["React", "Tailwind CSS", "GSAP", "PayStack API"],
       image: null,
-      link: "https://gpcgroupltd.com/",
+      link: "https://franemm.netlify.app/",
     },
     {
       title: "Trading Simulator",

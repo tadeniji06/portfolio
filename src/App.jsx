@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import Home from "./screens/Home";
-
+import AppRoutes from "./routes/routes";
 export default function App() {
   const [loading, setLoading] = useState(true);
 
@@ -51,7 +50,7 @@ export default function App() {
 
   return (
     <div>
-      <Home />
+     <AppRoutes />
     </div>
   );
 }

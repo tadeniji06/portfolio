@@ -89,6 +89,9 @@ const Skills = () => {
     { icon: 'logos:tailwindcss-icon', name: 'Tailwind CSS', level: 80, color: 'neon-green' },
     { icon: 'logos:typescript-icon', name: 'TypeScript', level: 55, color: 'neon-blue' },
     { icon: 'logos:git-icon', name: 'Git', level: 85, color: 'neon-pink' },
+    { icon: 'logos:mongodb', name: 'MongoDB', level: 80, color: 'neon-green' },
+    { icon: 'logos:nodejs', name: 'Node.js', level: 45, color: 'neon-green' },
+    { icon: 'logos:react', name: 'React Native', level: 65, color: 'neon-blue' },
   ];
 
   return (
@@ -98,7 +101,7 @@ const Skills = () => {
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {skills.map((skill, index) => (
-            <SkillCard 
+            <SkillCard
               key={skill.name}
               icon={skill.icon}
               name={skill.name}
