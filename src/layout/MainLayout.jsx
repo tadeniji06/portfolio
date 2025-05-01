@@ -1,10 +1,15 @@
 import { Outlet, useLocation } from "react-router-dom";
-import NavBar from '../components/NavBar';
+import { useEffect } from "react";
+import NavBar from "../components/NavBar";
 
 const MainLayout = () => {
-  
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
   return (
-    <div className="relative">
+    <div className='relative'>
       <NavBar />
       <Outlet />
     </div>
