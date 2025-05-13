@@ -126,6 +126,14 @@ const Projects = () => {
       link: "https://github.com/tadeniji06/Trading-Network-API",
     },
     {
+      title: "Business 360 Suites",
+      description:
+        "A website for a business automation company, showcasing their services and products.",
+      technologies: ["React", "Tailwind CSS", "Framer motion"],
+      image: null,
+      link: "https://theb360.com/",
+    },
+    {
       title: "E-commerce Store Dashboard",
       description:
         "A dashboard for an e-commerce store, providing insights and analytics for the store's performance.",
