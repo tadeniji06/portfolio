@@ -1,4 +1,3 @@
-import React from "react";
 import { Helmet } from "react-helmet";
 import PropTypes from "prop-types";
 
@@ -48,7 +47,7 @@ const SEO = ({
       <meta property='og:type' content={ogType} />
       <meta
         property='og:site_name'
-        content='Olutunmise Adeniji - Web Developer'
+        content='Olutunmise Adeniji - FullStack Developer'
       />
       <meta property='og:locale' content='en_NG' />
 
