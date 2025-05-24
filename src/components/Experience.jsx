@@ -82,10 +82,10 @@ const Experience = () => {
   const experiences = [
     {
       company: "B360 Solutions",
-      position: "Lead Front-End & WordPress Developer",
+      position: "Lead Front-End Developer",
       period: "February 2025 - Present",
       description:
-        "Leading front-end development initiatives for business automation web applications. Building and customizing client websites using WordPress and React depending on project requirements. Creating responsive and interactive user interfaces using modern JavaScript frameworks. Collaborating with design and back-end teams to deliver seamless user experiences across multiple platforms.",
+        "Leading front-end development initiatives for business automation web applications. Building and customizing client websites React depending on project requirements. Creating responsive and interactive user interfaces using modern JavaScript frameworks. Collaborating with design and back-end teams to deliver seamless user experiences across multiple platforms.",
     },
 
     {
