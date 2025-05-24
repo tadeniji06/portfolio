@@ -126,6 +126,21 @@ const Projects = () => {
       link: "https://github.com/tadeniji06/Trading-Network-API",
     },
     {
+      title: "Franemm Industries",
+      description:
+        "An industrial cosmetic and laundry producing company website",
+      technologies: ["React", "Tailwind CSS", "GSAP", "PayStack API"],
+      image: null,
+      link: "https://franemm.netlify.app/",
+    },
+    {
+      title: "Vedura Resort",
+      description: "Website for a resort, in progress.",
+      technologies: ["React", "Tailwind CSS", "Framer-motion"],
+      image: null,
+      link: "https://vedura.netlify.app/",
+    },
+    {
       title: "Business 360 Suites",
       description:
         "A website for a business automation company, showcasing their services and products.",
@@ -157,14 +172,7 @@ const Projects = () => {
       image: null,
       link: "https://plugevents.netlify.app/",
     },
-    {
-      title: "Franemm Industries",
-      description:
-        "An industrial cosmetic and laundry producing company website",
-      technologies: ["React", "Tailwind CSS", "GSAP", "PayStack API"],
-      image: null,
-      link: "https://franemm.netlify.app/",
-    },
+
     {
       title: "Trading Simulator",
       description:
