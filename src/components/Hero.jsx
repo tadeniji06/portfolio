@@ -215,7 +215,7 @@ const HeroSection = () => {
           className='text-base sm:text-lg md:text-xl text-white/80 mb-4 md:mb-6 overflow-hidden'
         >
           <span className='typing-text block sm:inline-block'>
-            Tech Enthusiast | Full-Stack Developer | Web2 & Web3 Developer
+            Tech Enthusiast | Front-End Developer | Web2 & Web3 Enthusiast
           </span>
         </p>
 

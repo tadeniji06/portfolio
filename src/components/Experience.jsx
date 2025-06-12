@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Icon } from "@iconify/react";
@@ -14,20 +14,25 @@ const ExperienceCard = ({
 }) => {
   const cardRef = useRef(null);
 
-  useEffect(() => {
-    gsap.fromTo(
-      cardRef.current,
-      { x: index % 2 === 0 ? -50 : 50, opacity: 0 },
-      {
-        x: 0,
-        opacity: 1,
-        duration: 0.8,
-        scrollTrigger: {
-          trigger: cardRef.current,
-          start: "top 85%",
-        },
-      }
-    );
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        cardRef.current,
+        { x: index % 2 === 0 ? -50 : 50, opacity: 0 },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 0.8,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: cardRef.current,
+            start: "top 85%",
+          },
+        }
+      );
+    }, cardRef);
+
+    return () => ctx.revert();
   }, [index]);
 
   return (
@@ -49,7 +54,7 @@ const ExperienceCard = ({
           <Icon icon='mdi:calendar' className='mr-2' />
           <span>{period}</span>
         </div>
-        <p className='text-white/80'>{description}</p>
+        <p className='text-white/80 whitespace-pre-line'>{description}</p>
       </div>
     </div>
   );
@@ -59,24 +64,25 @@ const Experience = () => {
   const sectionRef = useRef(null);
   const titleRef = useRef(null);
 
-  useEffect(() => {
-    gsap.fromTo(
-      titleRef.current,
-      { opacity: 0, y: -20 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%",
-        },
-      }
-    );
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        titleRef.current,
+        { opacity: 0, y: -20 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 80%",
+          },
+        }
+      );
+    }, sectionRef);
 
-    return () => {
-      ScrollTrigger.getAll().forEach((t) => t.kill());
-    };
+    return () => ctx.revert();
   }, []);
 
   const experiences = [
@@ -84,16 +90,19 @@ const Experience = () => {
       company: "B360 Solutions",
       position: "Lead Front-End Developer",
       period: "February 2025 - Present",
-      description:
-        "Leading front-end development initiatives for business automation web applications. Building and customizing client websites React depending on project requirements. Creating responsive and interactive user interfaces using modern JavaScript frameworks. Collaborating with design and back-end teams to deliver seamless user experiences across multiple platforms.",
+      description: `Spearheading the front-end architecture of scalable business automation platforms tailored to African markets.
+- Designing dynamic, responsive interfaces using React and modern JS tooling.
+- Translating complex requirements into seamless user journeys.
+- Coordinating cross-functional collaboration between UI/UX, backend, and product teams to deliver fast, intuitive applications.`,
     },
-
     {
       company: "Diakrino",
       position: "Full-Stack & Web3 Developer",
       period: "October 2023 - March 2025",
-      description:
-        "Developed and maintained client-facing web applications across both Web2 and Web3 ecosystems. Led development of NFT projects and blockchain node implementations. Part of the team that built a full-stack social media platform from concept to deployment. Implemented responsive designs, optimized web performance, and collaborated with cross-functional teams to meet project requirements and deadlines.",
+      description: `Built high-performance Web2 and Web3 applications from the ground up.
+- Engineered NFT minting platforms and custom smart contract integrations.
+- Co-led development of a decentralized social media network using full-stack tools.
+- Delivered responsive, secure, and user-friendly apps in agile sprints—balancing innovation with stability.`,
     },
   ];
 
@@ -114,7 +123,7 @@ const Experience = () => {
           <div className='absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-neon-purple/50 transform md:-translate-x-1/2'></div>
 
           {/* Experience cards */}
-          <div className='space-y-12'>
+          <div className='space-y-16 md:space-y-24'>
             {experiences.map((exp, index) => (
               <ExperienceCard
                 key={index}

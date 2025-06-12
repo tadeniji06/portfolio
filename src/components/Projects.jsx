@@ -135,16 +135,16 @@ const Projects = () => {
     },
     {
       title: "Vedura Resort",
-      description: "Website for a resort, in progress.",
+      description: "Website for a resort in Lagos, Nigeria",
       technologies: ["React", "Tailwind CSS", "Framer-motion"],
       image: null,
-      link: "https://vedura.netlify.app/",
+      link: "https://vedura.ng",
     },
     {
       title: "Business 360 Suites",
       description:
         "A website for a business automation company, showcasing their services and products.",
-      technologies: ["React", "Tailwind CSS", "Framer motion"],
+      technologies: ["React", "Tailwind CSS", "Framer motion", "Sanity CMS"],
       image: null,
       link: "https://theb360.com/",
     },
