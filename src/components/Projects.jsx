@@ -117,6 +117,13 @@ const Projects = () => {
   }, []);
 
   const projects = [
+     {
+      title: "Imperia Consulting",
+      description: "Website for a Real Estate & Consulting Firm in Kenya",
+      technologies: ["React", "Tailwind CSS", "Framer-motion"],
+      image: null,
+      link: "https://imperiagrouponline.com",
+    },
     {
       title: "Trading Simulator API",
       description:
