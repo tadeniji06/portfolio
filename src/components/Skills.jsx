@@ -128,12 +128,12 @@ const Skills = () => {
       level: 70,
       color: "neon-pink",
     },
-    {
-      icon: "logos:wordpress-icon",
-      name: "WordPress",
-      level: 55,
-      color: "neon-blue",
-    },
+    // {
+    //   icon: "logos:wordpress-icon",
+    //   name: "WordPress",
+    //   level: 55,
+    //   color: "neon-blue",
+    // },
     {
       icon: "logos:metamask-icon",
       name: "MetaMask",
