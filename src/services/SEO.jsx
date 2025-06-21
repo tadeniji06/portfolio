@@ -10,6 +10,9 @@ const SEO = ({
   ogType = "website",
   twitterCard = "summary_large_image",
   canonicalUrl,
+  author,
+  publishedAt,
+  isBlogPost = false,
 }) => {
   const defaultTitle =
     "Top Web & Frontend Developer in Nigeria | Olutunmise Adeniji";
@@ -21,58 +24,79 @@ const SEO = ({
     "https://olutunmise.netlify.app/profile-image.jpg";
   const siteUrl = "https://olutunmise.netlify.app";
 
+  const finalTitle = title || defaultTitle;
+  const finalDescription = description || defaultDescription;
+  const finalKeywords = keywords || defaultKeywords;
+  const finalOgImage = ogImage || defaultOgImage;
+  const finalOgUrl = ogUrl || siteUrl;
+  const finalCanonicalUrl = canonicalUrl || siteUrl;
+
+  const schemaBlogPost = isBlogPost
+    ? {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        headline: finalTitle,
+        description: finalDescription,
+        image: finalOgImage,
+        author: {
+          "@type": "Person",
+          name: author || "Olutunmise Adeniji",
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "Olutunmise Adeniji",
+          logo: {
+            "@type": "ImageObject",
+            url: defaultOgImage,
+          },
+        },
+        datePublished: publishedAt || new Date().toISOString(),
+        dateModified: publishedAt || new Date().toISOString(),
+        mainEntityOfPage: {
+          "@type": "WebPage",
+          "@id": finalOgUrl,
+        },
+      }
+    : null;
+
   return (
     <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{title || defaultTitle}</title>
-      <meta
-        name='description'
-        content={description || defaultDescription}
-      />
-      <meta name='keywords' content={keywords || defaultKeywords} />
-      <meta name='author' content='Olutunmise Adeniji' />
-      <meta name='robots' content='index, follow' />
+      {/* Basic */}
+      <title>{finalTitle}</title>
+      <meta name="description" content={finalDescription} />
+      <meta name="keywords" content={finalKeywords} />
+      <meta name="author" content="Olutunmise Adeniji" />
+      <meta name="robots" content="index, follow" />
+      <link rel="canonical" href={finalCanonicalUrl} />
 
-      {/* Canonical URL */}
-      <link rel='canonical' href={canonicalUrl || siteUrl} />
+      {/* Open Graph */}
+      <meta property="og:title" content={finalTitle} />
+      <meta property="og:description" content={finalDescription} />
+      <meta property="og:image" content={finalOgImage} />
+      <meta property="og:url" content={finalOgUrl} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:site_name" content="Olutunmise Adeniji - FullStack Developer" />
+      <meta property="og:locale" content="en_NG" />
 
-      {/* Open Graph Meta Tags */}
-      <meta property='og:title' content={title || defaultTitle} />
-      <meta
-        property='og:description'
-        content={description || defaultDescription}
-      />
-      <meta property='og:image' content={ogImage || defaultOgImage} />
-      <meta property='og:url' content={ogUrl || siteUrl} />
-      <meta property='og:type' content={ogType} />
-      <meta
-        property='og:site_name'
-        content='Olutunmise Adeniji - FullStack Developer'
-      />
-      <meta property='og:locale' content='en_NG' />
+      {/* Twitter */}
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:title" content={finalTitle} />
+      <meta name="twitter:description" content={finalDescription} />
+      <meta name="twitter:image" content={finalOgImage} />
 
-      {/* Twitter Card Meta Tags */}
-      <meta name='twitter:card' content={twitterCard} />
-      <meta name='twitter:title' content={title || defaultTitle} />
-      <meta
-        name='twitter:description'
-        content={description || defaultDescription}
-      />
-      <meta name='twitter:image' content={ogImage || defaultOgImage} />
+      {/* Geo */}
+      <meta name="geo.region" content="NG" />
+      <meta name="geo.placename" content="Lagos" />
+      <meta name="geo.position" content="6.5244;3.3792" />
+      <meta name="ICBM" content="6.5244, 3.3792" />
 
-      {/* Geo Meta Tags */}
-      <meta name='geo.region' content='NG' />
-      <meta name='geo.placename' content='Lagos' />
-      <meta name='geo.position' content='6.5244;3.3792' />
-      <meta name='ICBM' content='6.5244, 3.3792' />
-
-      {/* Structured Data */}
-      <script type='application/ld+json'>
+      {/* Schema: Person */}
+      <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Person",
           name: "Olutunmise Adeniji",
-          url: "https://olutunmise.netlify.app",
+          url: siteUrl,
           jobTitle: "Web & Frontend Developer",
           worksFor: {
             "@type": "Organization",
@@ -90,6 +114,13 @@ const SEO = ({
           ],
         })}
       </script>
+
+      {/* Schema: BlogPosting */}
+      {isBlogPost && (
+        <script type="application/ld+json">
+          {JSON.stringify(schemaBlogPost)}
+        </script>
+      )}
     </Helmet>
   );
 };
@@ -103,6 +134,9 @@ SEO.propTypes = {
   ogType: PropTypes.string,
   twitterCard: PropTypes.string,
   canonicalUrl: PropTypes.string,
+  author: PropTypes.string,
+  publishedAt: PropTypes.string,
+  isBlogPost: PropTypes.bool,
 };
 
 export default SEO;
