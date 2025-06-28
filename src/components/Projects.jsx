@@ -124,6 +124,13 @@ const Projects = () => {
       image: null,
       link: "https://imperiagrouponline.com",
     },
+      {
+      title: "Awo Tech Mall",
+      description: "Realtor, RealEstate and TechMall all in one, ikeja, Lagos",
+      technologies: ["React", "Tailwind CSS", "Framer-motion"],
+      image: null,
+      link: "https:/awotechmall.com",
+    },
     {
       title: "Trading Simulator API",
       description:
